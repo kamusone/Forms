@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<p>Bienvenue dans la création d'utilisateurs ! </p>
+
+<body>
+  <form method="post">
+    Username:<br>
+    <input type="text" name="username"><br>
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<br>
+
+    <p> <label for ="bio"> Ecrire votre biographie</label><br>
+    <textarea name="bio" id="decrire"> </textarea>
+
+<br>
+  <input type="submit" value ="Envoyer">
+</form>
+</body>
+</html>
