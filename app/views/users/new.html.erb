@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
-<p>Bienvenue dans la création d'utilisateurs ! </p>
+<h1>Bienvenue dans la création d'utilisateurs ! </h1>
 
 
 <!--#######################HTML###########################################-->
@@ -14,19 +14,20 @@
 <body>
 <form method="post">
 Username:<br>
-<input type="text" name="username"><br>
+<input type="text" name="username" placeholder="Fraçois Pignon"><br>
 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 <br>
 Email:<br>
-<input type="text" name="email" placeholder="Email"><br>
+<input type="text" name="email" placeholder="françois.pignon@gmail.com"><br>
 
 <br>
 
 <p> <label for ="bio"> Ecrire votre bioligraphie</label><br>
-<textarea name="bio" id="decrire"> </textarea>
+<textarea name="bio" id="decrire"  placeholder="300 mots"> </textarea>
 
 <br>
 <input type="submit" value ="Envoyer">
+<button type="submit" class="btn btn-primary">Sign in</button>
 </form>
 </body>
 
