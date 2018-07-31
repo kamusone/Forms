@@ -5,9 +5,9 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(
-      username: params[:username],
-      email: params[:email],
-      bio: params[:bio]
+    username: params[:username],
+    email: params[:email],
+    bio: params[:bio]
     )
 
     if @user.errors.any?
