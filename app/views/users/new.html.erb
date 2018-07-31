@@ -10,7 +10,7 @@
 
 
 <!--#######################HTML###########################################-->
-<!--
+
 <body>
 <form method="post">
 Username:<br>
@@ -18,7 +18,7 @@ Username:<br>
 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 <br>
 Email:<br>
-<input type="text" name="email"><br>
+<input type="text" name="email" placeholder="Email"><br>
 
 <br>
 
@@ -29,9 +29,9 @@ Email:<br>
 <input type="submit" value ="Envoyer">
 </form>
 </body>
--->
-<!--#######################FORM_TAG###########################################-->
 
+<!--#######################FORM_TAG###########################################-->
+<!--
 <body>
 <%= form_tag url_for(action: 'create'), method: "post" do %>
 <%= label_tag "Username"%>
@@ -49,7 +49,7 @@ Email:<br>
 <%= submit_tag "Create" %>
 <% end %>
 </body>
-
+-->
 <!--#######################FORM_FOR###########################################-->
 <!--
 <body>
