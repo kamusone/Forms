@@ -12,47 +12,57 @@
 <!--#######################HTML###########################################-->
 <!--
 <body>
-  <form method="post">
-    Username:<br>
-    <input type="text" name="username"><br>
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<form method="post">
+Username:<br>
+<input type="text" name="username"><br>
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 <br>
-  Email:<br>
-  <input type="text" name="email"><br>
-
-  <br>
-
-    <p> <label for ="bio"> Ecrire votre bioligraphie</label><br>
-    <textarea name="bio" id="decrire"> </textarea>
+Email:<br>
+<input type="text" name="email"><br>
 
 <br>
-  <input type="submit" value ="Envoyer">
+
+<p> <label for ="bio"> Ecrire votre bioligraphie</label><br>
+<textarea name="bio" id="decrire"> </textarea>
+
+<br>
+<input type="submit" value ="Envoyer">
 </form>
 </body>
 -->
 <!--#######################FORM_TAG###########################################-->
+
 <body>
-  <%= form_tag url_for(action: 'create'), method: "post" do %>
-  <%= label_tag "Username"%>
-  <%= text_field_tag :username%>
-  <br>
-  <br>
-  <%=label_tag "Email" %>
-  <%= email_field_tag :email%>
-  <br>
-  <br>
-  <%=label_tag "Bio" %>
-  <%=text_field_tag :bio%>
-  <br>
-  <br>
-  <%= submit_tag "Create" %>
+<%= form_tag url_for(action: 'create'), method: "post" do %>
+<%= label_tag "Username"%>
+<%= text_field_tag :username%>
+<br>
+<br>
+<%=label_tag "Email" %>
+<%= email_field_tag :email%>
+<br>
+<br>
+<%=label_tag "Bio" %>
+<%=text_field_tag :bio%>
+<br>
+<br>
+<%= submit_tag "Create" %>
+<% end %>
+</body>
+
+<!--#######################FORM_FOR###########################################-->
+<!--
+<body>
+  <%= form_for :users, method: "post" do |f| %>
+  Username: <%= f.text_field :username %>
+  <br />
+  Email : <%= f.email_field :email %>
+  <br />
+  Bio : <%= f.text_area :bio %>
+  <br />
+  <%= f.submit "Create User" %>
   <% end %>
 </body>
 
-  <!--#######################FORM_FOR###########################################-->
-
-
-
-
-
+-->
 </html>

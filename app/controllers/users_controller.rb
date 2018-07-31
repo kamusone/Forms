@@ -4,19 +4,22 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(username: params[:username], email: params[:email], bio: params[:bio]
+    @users = User.create(
+      username: params[:username],
+      email: params[:email],
+      bio: params[:bio]
     )
 
-    if @user.errors.any?
+    if @users.errors.any?
       redirect_to('/users/error')
     else
-      redirect_to("/users/#{@user.username}")
+      redirect_to("/users/#{@users.username}")
     end
   end
 
 
-  def show
-    @user = User.find_by(username:params[:id])
-  end
+    def show
+      @users = User.find_by(username:params[:id])
+    end
 
-end
+  end
